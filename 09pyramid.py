@@ -49,7 +49,7 @@ for i in np.arange(1,6):
 # image with direct connecting each half
 real = np.vstack((apple[:rows//2,:],orange[rows//2:,:]))
 
-# ToDo test git
+# TODO test git
 # cv2.imwrite('Pyramid_blending2.jpg',ls_)
 # cv2.imwrite('Direct_blending.jpg',real)
 
