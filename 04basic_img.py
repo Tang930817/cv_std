@@ -15,14 +15,16 @@ import numpy as np
 # img=cv2.imshow('test', img)
 # cv2.waitKey(0)
 
-img1 = cv2.imread('messi5.png')
+img1 = cv2.imread('logo.png')
 img2 = cv2.imread('messi6.jpg')
 
-img1 = img1[30:335,95:545]
-img2 = img2[30:335,30:480]
+# img1 = img1[30:335,95:545]
+# img2 = img2[30:335,30:480]
 
-dst = cv2.addWeighted(img1,0.7,img2,0.3,0)
+# dst = cv2.addWeighted(img1,0.7,img2,0.3,0)
+img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
+thresh_param, dst = cv2.threshold(img1,100,255,0)
 
-cv2.imshow('dst',dst)
+cv2.imshow('', dst)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
